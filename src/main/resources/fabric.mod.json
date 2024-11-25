@@ -1,0 +1,40 @@
+{
+	"schemaVersion": 1,
+	"id": "tomqntomod",
+	"version": "${version}",
+	"name": "Tomqnto Mod",
+	"description": "First mod lol",
+	"authors": [
+		"Tomqnto!"
+	],
+	"contact": {
+		"homepage": "https://fabricmc.net/",
+		"sources": "https://github.com/FabricMC/fabric-example-mod"
+	},
+	"license": "MIT",
+	"icon": "assets/tomqntomod/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"com.tomqnto.tomqntomod.TomqntoMod"
+		],
+		"fabric-datagen": [
+			"com.tomqnto.tomqntomod.TomqntoModDataGenerator"
+		],
+		"client": [
+			"com.tomqnto.tomqntomod.TomqntoModClient"
+		]
+	},
+	"mixins": [
+		"tomqntomod.mixins.json"
+	],
+	"depends": {
+		"fabricloader": ">=0.16.9",
+		"minecraft": "~1.21",
+		"java": ">=21",
+		"fabric-api": "*"
+	},
+	"suggests": {
+		"another-mod": "*"
+	}
+}
