@@ -12,7 +12,7 @@ public class TomqntoMod implements ModInitializer{
 
 	public static final Logger LOGGER = LoggerFactory.getLogger(MOD_ID);
 
-	// WHen onInitialize is called, initialize method in ModItems is called.
+	// When onInitialize method is called, initialize method in ModItems is called.
 	@Override
 	public void onInitialize() {
 		ModItems.initialize();
