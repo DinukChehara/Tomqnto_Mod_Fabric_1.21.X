@@ -1,15 +1,17 @@
-package com.tomqnto.tomqntomod.item.material;
+package com.tomqnto.tomqntomod.item.ToolMaterials;
 
 import com.tomqnto.tomqntomod.item.ModItems;
 import net.minecraft.block.Block;
+import net.minecraft.item.ToolMaterial;
 import net.minecraft.recipe.Ingredient;
 import net.minecraft.registry.tag.BlockTags;
 import net.minecraft.registry.tag.TagKey;
 
-public class LuminiteMaterial implements net.minecraft.item.ToolMaterial {
+public class LuminiteToolMaterial implements ToolMaterial {
+
     @Override
     public int getDurability() {
-        return 455;
+        return 1560;
     }
 
     @Override
@@ -19,7 +21,7 @@ public class LuminiteMaterial implements net.minecraft.item.ToolMaterial {
 
     @Override
     public float getAttackDamage() {
-        return 1f;
+        return 9.0f;
     }
 
     @Override
@@ -29,7 +31,7 @@ public class LuminiteMaterial implements net.minecraft.item.ToolMaterial {
 
     @Override
     public int getEnchantability() {
-        return 16;
+        return 12;
     }
 
     @Override
@@ -37,5 +39,6 @@ public class LuminiteMaterial implements net.minecraft.item.ToolMaterial {
         return Ingredient.ofItems(ModItems.LUMINITE_INGOT);
     }
 
-    public static final LuminiteMaterial INSTANCE = new LuminiteMaterial();
+    public static final LuminiteToolMaterial INSTANCE = new LuminiteToolMaterial();
+
 }
