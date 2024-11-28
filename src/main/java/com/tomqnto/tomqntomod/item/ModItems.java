@@ -1,7 +1,6 @@
 package com.tomqnto.tomqntomod.item;
 
 import com.tomqnto.tomqntomod.TomqntoMod;
-import com.tomqnto.tomqntomod.item.ToolMaterials.LuminiteToolMaterial;
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
 import net.fabricmc.fabric.api.registry.FuelRegistry;
 import net.minecraft.component.type.FoodComponent;
@@ -15,6 +14,8 @@ import net.minecraft.util.Identifier;
 
 import java.util.List;
 
+// --------------------------------------ModItems CLASS-----------------------------------------
+
 public class ModItems {
 
     // Food Components
@@ -22,30 +23,39 @@ public class ModItems {
 
 
     // Creates the Item
-    public static final Item RAW_LUMINITE = registerItem(new ItemRaw_Luminite(new Item.Settings()),
+    public static final Item RAW_LUMINITE = registerModItem(new ItemRaw_Luminite(new Item.Settings()),
             "raw_luminite");
 
-    public static final Item LUMINITE_INGOT = registerItem(new Item(new Item.Settings()),
+    public static final Item LUMINITE_INGOT = registerModItem(new Item(new Item.Settings()),
             "luminite_ingot");
 
-    public static final Item LUMINOUS_APPLE = registerItem(new ItemLuminous_Apple(new Item.Settings().food(GLOW_FOOD_COMPONENT)),
+    public static final Item LUMINOUS_APPLE = registerModItem(new ItemLuminous_Apple(new Item.Settings().food(GLOW_FOOD_COMPONENT)),
             "luminous_apple");
 
     // Tools
-    public static final Item LUMINITE_SWORD = registerItem
-            (new SwordItemLuminite_Sword(LuminiteToolMaterial.INSTANCE,  new Item.Settings()), "luminite_sword");
+    public static final Item LUMINITE_SWORD = registerModItem
+            (new SwordItemLuminite_Sword(ModToolMaterials.LUMINITE,  new Item.Settings()), "luminite_sword");
+
+// --------------------------------ITEM REGISTER METHOD----------------------------------------
 
     // Item register method
-    public static Item registerItem(Item item, String id) {
+    public static Item registerModItem(Item item, String id) {
         
         // Create the identifier for the item
         Identifier itemID = Identifier.of(TomqntoMod.MOD_ID, id);
 
+
+        // Send message to log
+        TomqntoMod.LOGGER.info("Registering Mod Items for " + TomqntoMod.MOD_ID);
+
         // Register and return the item.
         return Registry.register(Registries.ITEM, itemID, item);
+
     }
 
+// --------------------------------ITEM INITIALIZE METHOD---------------------------------------------
 
+    // Item initialize
     public static void initialize() {
         // Adds the items to an ItemGroup
         ItemGroupEvents.modifyEntriesEvent(ItemGroups.INGREDIENTS).
@@ -67,6 +77,8 @@ public class ModItems {
     }
 
 }
+
+// ----------------------------------ITEM CLASSES FOR TOOLTIPS-----------------------------------------------
 
 // Item with tooltips
 
@@ -102,8 +114,8 @@ class SwordItemLuminite_Sword extends SwordItem {
 
     @Override
     public void appendTooltip(ItemStack stack, TooltipContext context, List<Text> tooltip, TooltipType type) {
-        tooltip.add(Text.literal("Attack Damage: " + LuminiteToolMaterial.INSTANCE.getAttackDamage()).formatted(Formatting.AQUA));
-        tooltip.add(Text.literal("Repair Ingredients: " + LuminiteToolMaterial.INSTANCE.getRepairIngredient()).formatted(Formatting.AQUA));
+        tooltip.add(Text.literal("Attack Damage: " + ModToolMaterials.LUMINITE.getAttackDamage()).formatted(Formatting.AQUA));
+        tooltip.add(Text.literal("Repair Ingredients: " + ModToolMaterials.LUMINITE.getRepairIngredient()).formatted(Formatting.AQUA));
 
     }
 }

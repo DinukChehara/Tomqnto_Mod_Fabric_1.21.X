@@ -2,5 +2,6 @@
   "item.tomqntomod.raw_luminite": "Raw Luminite",
   "item.tomqntomod.luminite_ingot": "Luminite Ingot",
   "item.tomqntomod.luminous_apple": "Luminous Apple",
-  "item.tomqntomod.luminite_sword": "Luminite Sword"
+  "item.tomqntomod.luminite_sword": "Luminite Sword",
+  "block.tomqntomod.luminite_ore": "Luminite Ore"
 }

@@ -1,5 +1,6 @@
 package com.tomqnto.tomqntomod;
 
+import com.tomqnto.tomqntomod.block.ModBlocks;
 import com.tomqnto.tomqntomod.item.ModItems;
 import net.fabricmc.api.ModInitializer;
 
@@ -16,5 +17,6 @@ public class TomqntoMod implements ModInitializer{
 	@Override
 	public void onInitialize() {
 		ModItems.initialize();
+		ModBlocks.initialize();
 	}
 }
