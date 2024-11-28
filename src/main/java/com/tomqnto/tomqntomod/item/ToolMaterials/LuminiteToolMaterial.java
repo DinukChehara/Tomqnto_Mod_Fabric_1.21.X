@@ -21,7 +21,7 @@ public class LuminiteToolMaterial implements ToolMaterial {
 
     @Override
     public float getAttackDamage() {
-        return 9.0f;
+        return 1444.3f;
     }
 
     @Override
