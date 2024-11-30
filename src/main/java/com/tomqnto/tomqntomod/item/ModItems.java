@@ -87,6 +87,7 @@ public class ModItems {
     public static void initialize() {
         TomqntoItemGroup.registerItemGroup();
         TomqntoItemGroup.addItemsToItemGroup();
+        TomqntoMod.LOGGER.info("Initializing Mod Items");
     }
 
 }

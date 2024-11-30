@@ -1,6 +1,7 @@
 package com.tomqnto.tomqntomod.block;
 
 import com.tomqnto.tomqntomod.TomqntoMod;
+import com.tomqnto.tomqntomod.item.TomqntoItemGroup;
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
 import net.minecraft.block.AbstractBlock;
 import net.minecraft.block.Block;
@@ -17,9 +18,9 @@ import net.minecraft.util.Identifier;
 
 public class ModBlocks {
 
-    public static final Block LUMINITE_ORE = registerModBlock(
+    public static final Block DEEPSLATE_LUMINITE_ORE = registerModBlock(
             new Block(AbstractBlock.Settings.create().requiresTool().strength(4.4f, 4.5f).sounds(BlockSoundGroup.DEEPSLATE)),
-            "luminite_ore",
+            "deepslate_luminite_ore",
             true);
 
 
@@ -43,9 +44,9 @@ public class ModBlocks {
 
     public static void initialize() {
 
-//        ItemGroupEvents.modifyEntriesEvent(ItemGroups.NATURAL)
-//                .register((itemGroup) -> itemGroup
-//                        .add(ModBlocks.LUMINITE_ORE.asItem()));
+        ItemGroupEvents.modifyEntriesEvent(TomqntoItemGroup.TOMQNTOMOD_KEY)
+                .register((itemGroup) -> itemGroup
+                        .add(ModBlocks.DEEPSLATE_LUMINITE_ORE.asItem()));
     }
 
 }
