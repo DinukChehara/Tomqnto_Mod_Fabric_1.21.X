@@ -18,7 +18,7 @@ import net.minecraft.util.Identifier;
 public class ModBlocks {
 
     public static final Block LUMINITE_ORE = registerModBlock(
-            new Block(AbstractBlock.Settings.create().sounds(BlockSoundGroup.STONE)),
+            new Block(AbstractBlock.Settings.create().requiresTool().strength(4.4f, 4.5f).sounds(BlockSoundGroup.DEEPSLATE)),
             "luminite_ore",
             true);
 

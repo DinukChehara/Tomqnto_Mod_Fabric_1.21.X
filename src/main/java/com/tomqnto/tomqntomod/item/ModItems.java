@@ -14,13 +14,14 @@ import net.minecraft.util.Identifier;
 
 import java.util.List;
 
-// --------------------------------------ModItems CLASS-----------------------------------------
 
 public class ModItems {
+
 
     // Food Components
     public final static FoodComponent GLOW_FOOD_COMPONENT = ModFoodComponents.GLOW_FOOD_COMPONENT;
 
+    // --------------------------------------REGISTERING/ADDING ITEMS-----------------------------------------
 
     // Creates the Item
     public static final Item RAW_LUMINITE = registerModItem(new ItemRaw_Luminite(new Item.Settings()),
@@ -35,6 +36,33 @@ public class ModItems {
     // Tools
     public static final Item LUMINITE_SWORD = registerModItem
             (new SwordItemLuminite_Sword(ModToolMaterials.LUMINITE,  new Item.Settings()), "luminite_sword");
+
+    //Armor Items
+    public static final Item LUMINITE_HELMET =
+            registerModItem(new ArmorItem(new ModArmorMaterials().LUMINITE,
+                            ArmorItem.Type.HELMET, new Item.Settings()
+                            .maxDamage(ArmorItem.Type.HELMET.getMaxDamage(ModArmorMaterials.LUMINITE_DURABILITY_MULTIPLIER))),
+                    "luminite_helmet");
+
+
+    public static final Item LUMINITE_CHESTPLATE =
+            registerModItem(new ArmorItem(new ModArmorMaterials().LUMINITE,
+                            ArmorItem.Type.CHESTPLATE, new Item.Settings()
+                            .maxDamage(ArmorItem.Type.CHESTPLATE.getMaxDamage(ModArmorMaterials.LUMINITE_DURABILITY_MULTIPLIER))),
+                    "luminite_chestplate");
+
+    public static final Item LUMINITE_LEGGINGS =
+            registerModItem(new ArmorItem(new ModArmorMaterials().LUMINITE,
+                            ArmorItem.Type.LEGGINGS, new Item.Settings()
+                            .maxDamage(ArmorItem.Type.LEGGINGS.getMaxDamage(ModArmorMaterials.LUMINITE_DURABILITY_MULTIPLIER))),
+                    "luminite_leggings");
+
+
+    public static final Item LUMINITE_BOOTS =
+            registerModItem(new ArmorItem(new ModArmorMaterials().LUMINITE,
+                            ArmorItem.Type.BOOTS, new Item.Settings()
+                            .maxDamage(ArmorItem.Type.BOOTS.getMaxDamage(ModArmorMaterials.LUMINITE_DURABILITY_MULTIPLIER))),
+                    "luminite_boots");
 
 // --------------------------------ITEM REGISTER METHOD----------------------------------------
 
@@ -57,23 +85,8 @@ public class ModItems {
 
     // Item initialize
     public static void initialize() {
-        // Adds the items to an ItemGroup
-        ItemGroupEvents.modifyEntriesEvent(ItemGroups.INGREDIENTS).
-                register((itemGroup) -> itemGroup.add(ModItems.RAW_LUMINITE));
-
-        ItemGroupEvents.modifyEntriesEvent(ItemGroups.INGREDIENTS).
-                register((itemGroup) -> itemGroup.add(ModItems.LUMINITE_INGOT));
-
-        ItemGroupEvents.modifyEntriesEvent(ItemGroups.FOOD_AND_DRINK).
-                register((itemGroup) -> itemGroup.add(ModItems.LUMINOUS_APPLE));
-
-        ItemGroupEvents.modifyEntriesEvent(ItemGroups.COMBAT).
-                register((itemGroup) -> itemGroup.add(ModItems.LUMINITE_SWORD));
-
-
-
-        // When used as fuel, it will take 5 seconds(20 ticks = 1 second) to complete smelting
-        FuelRegistry.INSTANCE.add(ModItems.RAW_LUMINITE, 5 * 20);
+        TomqntoItemGroup.registerItemGroup();
+        TomqntoItemGroup.addItemsToItemGroup();
     }
 
 }
