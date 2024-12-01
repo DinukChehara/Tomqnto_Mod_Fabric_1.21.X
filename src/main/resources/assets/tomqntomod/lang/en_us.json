@@ -7,5 +7,8 @@
   "item.tomqntomod.luminite_chestplate": "Luminite Chestplate",
   "item.tomqntomod.luminite_leggings": "Luminite Leggings",
   "item.tomqntomod.luminite_boots": "Luminite Boots",
-  "block.tomqntomod.deepslate_luminite_ore": "Deepslate Luminite Ore"
+  "block.tomqntomod.deepslate_luminite_ore": "Deepslate Luminite Ore",
+
+  "tooltip.luminous_apple.shift_down": "A §eSpecial§r apple made out of §bLuminite!§r",
+  "tooltip.luminous_apple": "Press §lSHIFT§r for more information."
 }

@@ -25,6 +25,7 @@ public class TomqntoItemGroup {
     // register the group
     public static void registerItemGroup() {
         Registry.register(Registries.ITEM_GROUP, TOMQNTOMOD_KEY, TOMQNTOMOD);
+        TomqntoMod.LOGGER.info("Registered Item Group: TOMQNTOMOD - " + TOMQNTOMOD_KEY);
     }
 
     // add items to the group
@@ -40,6 +41,7 @@ public class TomqntoItemGroup {
                     itemGroup.add(ModItems.LUMINITE_LEGGINGS);
                     itemGroup.add(ModItems.LUMINITE_BOOTS);
                 });
+        TomqntoMod.LOGGER.info("Added items to item group TomqntoMod");
     }
 
 }

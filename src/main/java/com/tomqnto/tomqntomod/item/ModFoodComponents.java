@@ -8,12 +8,9 @@ import java.util.List;
 
 public class ModFoodComponents {
 
-
-    public static final FoodComponent GLOW_FOOD_COMPONENT =
-            new FoodComponent.Builder().nutrition(10).saturationModifier(10).alwaysEdible().snack()
-            .statusEffect(new StatusEffectInstance(StatusEffects.GLOWING, 10 * 20, 1), 1f)
-            .statusEffect(new StatusEffectInstance(StatusEffects.SPEED, 10 * 20, 2), 1f)
-            .statusEffect(new StatusEffectInstance(StatusEffects.HASTE, 10*20, 2), 1f)
+    public static final FoodComponent LUMINOUS_APPLE = new FoodComponent.Builder()
+            .nutrition(4).saturationModifier(1.0f)
+            .statusEffect(new StatusEffectInstance(StatusEffects.SPEED, 300), 1.0f)
             .build();
 
 }

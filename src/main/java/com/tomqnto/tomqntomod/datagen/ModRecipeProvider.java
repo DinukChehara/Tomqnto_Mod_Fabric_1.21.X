@@ -7,6 +7,7 @@ import net.fabricmc.fabric.api.datagen.v1.provider.FabricRecipeProvider;
 import net.minecraft.data.server.recipe.RecipeExporter;
 import net.minecraft.data.server.recipe.ShapedRecipeJsonBuilder;
 import net.minecraft.item.ItemConvertible;
+import net.minecraft.item.Items;
 import net.minecraft.recipe.CraftingRecipe;
 import net.minecraft.recipe.ShapedRecipe;
 import net.minecraft.recipe.book.RecipeCategory;
@@ -32,14 +33,13 @@ public class ModRecipeProvider extends FabricRecipeProvider {
 
         ShapedRecipeJsonBuilder.create(RecipeCategory.COMBAT, ModItems.LUMINITE_HELMET)
                 .pattern("LLL")
-                .pattern("LLL")
-                .pattern("LLL")
+                .pattern("L L")
                 .input('L', ModItems.LUMINITE_INGOT)
                 .criterion(hasItem(ModItems.LUMINITE_INGOT), conditionsFromItem(ModItems.LUMINITE_INGOT))
                 .offerTo(recipeExporter);
 
         ShapedRecipeJsonBuilder.create(RecipeCategory.COMBAT, ModItems.LUMINITE_CHESTPLATE)
-                .pattern("LLL")
+                .pattern("L L")
                 .pattern("LLL")
                 .pattern("LLL")
                 .input('L', ModItems.LUMINITE_INGOT)
@@ -48,16 +48,15 @@ public class ModRecipeProvider extends FabricRecipeProvider {
 
         ShapedRecipeJsonBuilder.create(RecipeCategory.COMBAT, ModItems.LUMINITE_LEGGINGS)
                 .pattern("LLL")
-                .pattern("LLL")
-                .pattern("LLL")
+                .pattern("L L")
+                .pattern("L L")
                 .input('L', ModItems.LUMINITE_INGOT)
                 .criterion(hasItem(ModItems.LUMINITE_INGOT), conditionsFromItem(ModItems.LUMINITE_INGOT))
                 .offerTo(recipeExporter);
 
         ShapedRecipeJsonBuilder.create(RecipeCategory.COMBAT, ModItems.LUMINITE_BOOTS)
-                .pattern("LLL")
-                .pattern("LLL")
-                .pattern("LLL")
+                .pattern("L L")
+                .pattern("L L")
                 .input('L', ModItems.LUMINITE_INGOT)
                 .criterion(hasItem(ModItems.LUMINITE_INGOT), conditionsFromItem(ModItems.LUMINITE_INGOT))
                 .offerTo(recipeExporter);

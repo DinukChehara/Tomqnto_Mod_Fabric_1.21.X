@@ -31,6 +31,7 @@ public class ModModelProvider extends FabricModelProvider {
         itemModelGenerator.register(ModItems.LUMINITE_CHESTPLATE, Models.GENERATED);
         itemModelGenerator.register(ModItems.LUMINITE_LEGGINGS, Models.GENERATED);
         itemModelGenerator.register(ModItems.LUMINITE_BOOTS, Models.GENERATED);
-        itemModelGenerator.register(ModItems.LUMINITE_SWORD, Models.GENERATED);
+
+        itemModelGenerator.register(ModItems.LUMINITE_SWORD, Models.HANDHELD);
     }
 }
