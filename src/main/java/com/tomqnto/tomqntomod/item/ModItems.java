@@ -2,7 +2,7 @@ package com.tomqnto.tomqntomod.item;
 
 import com.tomqnto.tomqntomod.TomqntoMod;
 import net.minecraft.client.gui.screen.Screen;
-import net.minecraft.component.type.FoodComponent;
+import net.minecraft.component.type.AttributeModifiersComponent;
 import net.minecraft.item.*;
 import net.minecraft.item.tooltip.TooltipType;
 import net.minecraft.registry.Registries;
@@ -31,6 +31,7 @@ public class ModItems {
                     if (Screen.hasShiftDown()) {
                         tooltip.add(Text.translatable("tooltip.luminous_apple.shift_down"));
                     } else {
+                        tooltip.add(Text.literal(""));
                         tooltip.add(Text.translatable("tooltip.luminous_apple"));
                     }
                     super.appendTooltip(stack, context, tooltip, type);

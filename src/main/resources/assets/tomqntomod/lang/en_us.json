@@ -2,12 +2,19 @@
   "item.tomqntomod.raw_luminite": "Raw Luminite",
   "item.tomqntomod.luminite_ingot": "Luminite Ingot",
   "item.tomqntomod.luminous_apple": "Luminous Apple",
+
   "item.tomqntomod.luminite_sword": "Luminite Sword",
+
   "item.tomqntomod.luminite_helmet": "Luminite Helmet",
   "item.tomqntomod.luminite_chestplate": "Luminite Chestplate",
   "item.tomqntomod.luminite_leggings": "Luminite Leggings",
   "item.tomqntomod.luminite_boots": "Luminite Boots",
+
   "block.tomqntomod.deepslate_luminite_ore": "Deepslate Luminite Ore",
+  "block.tomqntomod.luminite_block": "Luminite Block",
+
+  "block.tomqntomod.mahogany_log": "Mahogany Log",
+  "block.tomqntomod.mahogany_planks": "Mahogany Planks",
 
   "tooltip.luminous_apple.shift_down": "A §eSpecial§r apple made out of §bLuminite!§r",
   "tooltip.luminous_apple": "Press §lSHIFT§r for more information."

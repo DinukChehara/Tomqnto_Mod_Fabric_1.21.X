@@ -1,17 +1,21 @@
 package com.tomqnto.tomqntomod.datagen;
 
+import com.tomqnto.tomqntomod.TomqntoMod;
 import com.tomqnto.tomqntomod.block.ModBlocks;
 import com.tomqnto.tomqntomod.item.ModItems;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricRecipeProvider;
 import net.minecraft.data.server.recipe.RecipeExporter;
 import net.minecraft.data.server.recipe.ShapedRecipeJsonBuilder;
+import net.minecraft.data.server.recipe.ShapelessRecipeJsonBuilder;
 import net.minecraft.item.ItemConvertible;
 import net.minecraft.item.Items;
 import net.minecraft.recipe.CraftingRecipe;
 import net.minecraft.recipe.ShapedRecipe;
+import net.minecraft.recipe.ShapelessRecipe;
 import net.minecraft.recipe.book.RecipeCategory;
 import net.minecraft.registry.RegistryWrapper;
+import net.minecraft.util.Identifier;
 
 import java.awt.*;
 import java.util.List;
@@ -60,6 +64,28 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                 .input('L', ModItems.LUMINITE_INGOT)
                 .criterion(hasItem(ModItems.LUMINITE_INGOT), conditionsFromItem(ModItems.LUMINITE_INGOT))
                 .offerTo(recipeExporter);
+
+        offerReversibleCompactingRecipes(recipeExporter,
+                RecipeCategory.BUILDING_BLOCKS,  ModItems.LUMINITE_INGOT, RecipeCategory.DECORATIONS,
+                ModBlocks.LUMINITE_BLOCK);
+
+        ShapelessRecipeJsonBuilder.create(RecipeCategory.BUILDING_BLOCKS, ModBlocks.MAHOGANY_PLANKS, 4)
+                .input(ModBlocks.MAHOGANY_LOG.asItem())
+                .criterion(hasItem(ModBlocks.MAHOGANY_LOG), conditionsFromItem(ModBlocks.MAHOGANY_LOG))
+                .offerTo(recipeExporter);
+
+        ShapelessRecipeJsonBuilder.create(RecipeCategory.BUILDING_BLOCKS, ModBlocks.MAHOGANY_PLANKS, 4)
+                .input(ModBlocks.STRIPPED_MAHOGANY_LOG.asItem())
+                .criterion(hasItem(ModBlocks.STRIPPED_MAHOGANY_LOG), conditionsFromItem(ModBlocks.STRIPPED_MAHOGANY_LOG))
+                .offerTo(recipeExporter, Identifier.of(TomqntoMod.MOD_ID, "mahogany_planks_from_stripped_log"));
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.BUILDING_BLOCKS, ModBlocks.MAHOGANY_WOOD, 3)
+                .pattern("MM")
+                .pattern("MM")
+                .input('M', ModBlocks.MAHOGANY_LOG.asItem())
+                .criterion(hasItem(ModBlocks.MAHOGANY_LOG), conditionsFromItem(ModBlocks.MAHOGANY_LOG))
+                .offerTo(recipeExporter);
+
 
     }
 }

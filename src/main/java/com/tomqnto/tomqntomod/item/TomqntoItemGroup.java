@@ -1,6 +1,7 @@
 package com.tomqnto.tomqntomod.item;
 
 import com.tomqnto.tomqntomod.TomqntoMod;
+import com.tomqnto.tomqntomod.block.ModBlocks;
 import net.fabricmc.fabric.api.itemgroup.v1.FabricItemGroup;
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
 import net.minecraft.item.ItemGroup;
@@ -42,6 +43,19 @@ public class TomqntoItemGroup {
                     itemGroup.add(ModItems.LUMINITE_BOOTS);
                 });
         TomqntoMod.LOGGER.info("Added items to item group TomqntoMod");
+    }
+
+    public static void addBlockItemsToItemGroup() {
+        ItemGroupEvents.modifyEntriesEvent(TOMQNTOMOD_KEY)
+                .register(itemGroup -> {
+                    itemGroup.add(ModBlocks.LUMINITE_BLOCK.asItem());
+                    itemGroup.add(ModBlocks.DEEPSLATE_LUMINITE_ORE.asItem());
+
+                    itemGroup.add(ModBlocks.MAHOGANY_LOG.asItem());
+                    itemGroup.add(ModBlocks.MAHOGANY_WOOD.asItem());
+                    itemGroup.add(ModBlocks.MAHOGANY_PLANKS.asItem());
+                    itemGroup.add(ModBlocks.STRIPPED_MAHOGANY_LOG.asItem());
+                });
     }
 
 }

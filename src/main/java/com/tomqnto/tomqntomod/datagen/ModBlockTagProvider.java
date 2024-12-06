@@ -18,9 +18,16 @@ public class ModBlockTagProvider extends FabricTagProvider.BlockTagProvider {
     protected void configure(RegistryWrapper.WrapperLookup wrapperLookup) {
 
         getOrCreateTagBuilder(BlockTags.PICKAXE_MINEABLE)
-                .add(ModBlocks.DEEPSLATE_LUMINITE_ORE);
+                .add(ModBlocks.DEEPSLATE_LUMINITE_ORE)
+                .add(ModBlocks.LUMINITE_BLOCK);
 
         getOrCreateTagBuilder(BlockTags.NEEDS_DIAMOND_TOOL)
-                .add(ModBlocks.DEEPSLATE_LUMINITE_ORE);
+                .add(ModBlocks.DEEPSLATE_LUMINITE_ORE)
+                .add(ModBlocks.LUMINITE_BLOCK);
+
+        getOrCreateTagBuilder(BlockTags.AXE_MINEABLE)
+                .add(ModBlocks.MAHOGANY_LOG)
+                .add(ModBlocks.MAHOGANY_WOOD)
+                .add(ModBlocks.MAHOGANY_PLANKS);
     }
 }
