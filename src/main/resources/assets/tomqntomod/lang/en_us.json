@@ -16,6 +16,15 @@
   "block.tomqntomod.mahogany_log": "Mahogany Log",
   "block.tomqntomod.mahogany_planks": "Mahogany Planks",
 
+  "block.tomqntomod.mahogany_slabs": "Mahogany Slabs",
+  "block.tomqntomod.mahogany_stairs": "Mahogany Stairs",
+  "block.tomqntomod.mahogany_fence": "Mahogany Fence",
+  "block.tomqntomod.mahogany_fence_gate": "Mahogany Fence Gate",
+  "block.tomqntomod.mahogany_pressure_plate": "Mahogany Pressure Plate",
+  "block.tomqntomod.mahogany_button": "Mahogany Button",
+  "block.tomqntomod.mahogany_door": "Mahogany Door",
+  "block.tomqntomod.mahogany_trapdoor": "Mahogany Trapdoor",
+
   "tooltip.luminous_apple.shift_down": "A §eSpecial§r apple made out of §bLuminite!§r",
   "tooltip.luminous_apple": "Press §lSHIFT§r for more information."
 }

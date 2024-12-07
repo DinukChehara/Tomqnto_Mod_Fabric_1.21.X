@@ -11,6 +11,7 @@ import net.minecraft.data.server.recipe.ShapelessRecipeJsonBuilder;
 import net.minecraft.item.ItemConvertible;
 import net.minecraft.item.Items;
 import net.minecraft.recipe.CraftingRecipe;
+import net.minecraft.recipe.Ingredient;
 import net.minecraft.recipe.ShapedRecipe;
 import net.minecraft.recipe.ShapelessRecipe;
 import net.minecraft.recipe.book.RecipeCategory;
@@ -85,6 +86,11 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                 .input('M', ModBlocks.MAHOGANY_LOG.asItem())
                 .criterion(hasItem(ModBlocks.MAHOGANY_LOG), conditionsFromItem(ModBlocks.MAHOGANY_LOG))
                 .offerTo(recipeExporter);
+
+        createDoorRecipe(ModBlocks.MAHOGANY_DOOR, Ingredient.ofItems(ModBlocks.MAHOGANY_PLANKS))
+                .criterion(hasItem(ModBlocks.MAHOGANY_PLANKS), conditionsFromItem(ModBlocks.MAHOGANY_PLANKS));
+
+
 
 
     }

@@ -55,6 +55,16 @@ public class TomqntoItemGroup {
                     itemGroup.add(ModBlocks.MAHOGANY_WOOD.asItem());
                     itemGroup.add(ModBlocks.MAHOGANY_PLANKS.asItem());
                     itemGroup.add(ModBlocks.STRIPPED_MAHOGANY_LOG.asItem());
+                    itemGroup.add(ModBlocks.STRIPPED_MAHOGANY_WOOD.asItem());
+
+                    itemGroup.add(ModBlocks.MAHOGANY_SLABS.asItem());
+                    itemGroup.add(ModBlocks.MAHOGANY_STAIRS.asItem());
+                    itemGroup.add(ModBlocks.MAHOGANY_FENCE.asItem());
+                    itemGroup.add(ModBlocks.MAHOGANY_FENCE_GATE.asItem());
+                    itemGroup.add(ModBlocks.MAHOGANY_DOOR.asItem());
+                    itemGroup.add(ModBlocks.MAHOGANY_TRAPDOOR.asItem());
+                    itemGroup.add(ModBlocks.MAHOGANY_BUTTON.asItem());
+                    itemGroup.add(ModBlocks.MAHOGANY_PRESSURE_PLATE.asItem());
                 });
     }
 

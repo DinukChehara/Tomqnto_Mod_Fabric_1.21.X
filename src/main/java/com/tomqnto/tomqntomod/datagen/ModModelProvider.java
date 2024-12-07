@@ -21,8 +21,20 @@ public class ModModelProvider extends FabricModelProvider {
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.LUMINITE_BLOCK);
 
         blockStateModelGenerator.registerLog(ModBlocks.MAHOGANY_LOG).log(ModBlocks.MAHOGANY_LOG).wood(ModBlocks.MAHOGANY_WOOD);
-        blockStateModelGenerator.registerLog(ModBlocks.STRIPPED_MAHOGANY_LOG).log(ModBlocks.STRIPPED_MAHOGANY_LOG);
-        blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.MAHOGANY_PLANKS);
+        blockStateModelGenerator.registerLog(ModBlocks.STRIPPED_MAHOGANY_LOG).log(ModBlocks.STRIPPED_MAHOGANY_LOG).wood(ModBlocks.STRIPPED_MAHOGANY_WOOD);
+
+        BlockStateModelGenerator.BlockTexturePool mahoganyPlankPool = blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.MAHOGANY_PLANKS);
+
+        mahoganyPlankPool.slab(ModBlocks.MAHOGANY_SLABS);
+        mahoganyPlankPool.stairs(ModBlocks.MAHOGANY_STAIRS);
+        mahoganyPlankPool.button(ModBlocks.MAHOGANY_BUTTON);
+        mahoganyPlankPool.pressurePlate(ModBlocks.MAHOGANY_PRESSURE_PLATE);
+        mahoganyPlankPool.fence(ModBlocks.MAHOGANY_FENCE);
+        mahoganyPlankPool.fenceGate(ModBlocks.MAHOGANY_FENCE_GATE);
+
+        blockStateModelGenerator.registerDoor(ModBlocks.MAHOGANY_DOOR);
+        blockStateModelGenerator.registerTrapdoor(ModBlocks.MAHOGANY_TRAPDOOR);
+
     }
 
     @Override

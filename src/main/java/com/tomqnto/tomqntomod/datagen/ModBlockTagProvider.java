@@ -29,5 +29,11 @@ public class ModBlockTagProvider extends FabricTagProvider.BlockTagProvider {
                 .add(ModBlocks.MAHOGANY_LOG)
                 .add(ModBlocks.MAHOGANY_WOOD)
                 .add(ModBlocks.MAHOGANY_PLANKS);
+
+        getOrCreateTagBuilder(BlockTags.FENCES)
+                .add(ModBlocks.MAHOGANY_FENCE);
+
+        getOrCreateTagBuilder(BlockTags.FENCE_GATES)
+                .add(ModBlocks.MAHOGANY_FENCE_GATE);
     }
 }

@@ -24,5 +24,14 @@ public class ModLootTableProvider extends FabricBlockLootTableProvider {
         addDrop(ModBlocks.MAHOGANY_WOOD);
         addDrop(ModBlocks.MAHOGANY_PLANKS);
         addDrop(ModBlocks.STRIPPED_MAHOGANY_LOG);
+
+        addDrop(ModBlocks.MAHOGANY_SLABS, slabDrops(ModBlocks.MAHOGANY_SLABS));
+        addDrop(ModBlocks.MAHOGANY_STAIRS);
+        addDrop(ModBlocks.MAHOGANY_BUTTON);
+        addDrop(ModBlocks.MAHOGANY_PRESSURE_PLATE);
+        addDrop(ModBlocks.MAHOGANY_FENCE);
+        addDrop(ModBlocks.MAHOGANY_FENCE_GATE);
+        addDrop(ModBlocks.MAHOGANY_TRAPDOOR);
+        addDrop(ModBlocks.MAHOGANY_DOOR, doorDrops(ModBlocks.MAHOGANY_DOOR));
     }
 }
