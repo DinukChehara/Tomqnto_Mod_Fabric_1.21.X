@@ -17,6 +17,7 @@ import net.minecraft.recipe.ShapelessRecipe;
 import net.minecraft.recipe.book.RecipeCategory;
 import net.minecraft.registry.RegistryWrapper;
 import net.minecraft.util.Identifier;
+import org.apache.logging.log4j.core.pattern.EqualsIgnoreCaseReplacementConverter;
 
 import java.awt.*;
 import java.util.List;
@@ -88,10 +89,35 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                 .offerTo(recipeExporter);
 
         createDoorRecipe(ModBlocks.MAHOGANY_DOOR, Ingredient.ofItems(ModBlocks.MAHOGANY_PLANKS))
-                .criterion(hasItem(ModBlocks.MAHOGANY_PLANKS), conditionsFromItem(ModBlocks.MAHOGANY_PLANKS));
+                .criterion(hasItem(ModBlocks.MAHOGANY_PLANKS), conditionsFromItem(ModBlocks.MAHOGANY_PLANKS))
+                .offerTo(recipeExporter);
 
+        offerSlabRecipe(recipeExporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.MAHOGANY_SLABS, ModBlocks.MAHOGANY_PLANKS);
 
+        createFenceRecipe(ModBlocks.MAHOGANY_FENCE, Ingredient.ofItems(ModBlocks.MAHOGANY_PLANKS))
+                .criterion(hasItem(ModBlocks.MAHOGANY_PLANKS), conditionsFromItem(ModBlocks.MAHOGANY_PLANKS))
+                .offerTo(recipeExporter);
 
+        createStairsRecipe(ModBlocks.MAHOGANY_STAIRS, Ingredient.ofItems(ModBlocks.MAHOGANY_PLANKS))
+                .criterion(hasItem(ModBlocks.MAHOGANY_PLANKS), conditionsFromItem(ModBlocks.MAHOGANY_PLANKS))
+                .offerTo(recipeExporter);
+
+        createFenceGateRecipe(ModBlocks.MAHOGANY_FENCE_GATE, Ingredient.ofItems(ModBlocks.MAHOGANY_PLANKS))
+                .criterion(hasItem(ModBlocks.MAHOGANY_PLANKS), conditionsFromItem(ModBlocks.MAHOGANY_PLANKS))
+                .offerTo(recipeExporter);
+
+        createTrapdoorRecipe(ModBlocks.MAHOGANY_TRAPDOOR, Ingredient.ofItems(ModBlocks.MAHOGANY_PLANKS))
+                .criterion(hasItem(ModBlocks.MAHOGANY_PLANKS), conditionsFromItem(ModBlocks.MAHOGANY_PLANKS))
+                .offerTo(recipeExporter);
+
+        createPressurePlateRecipe(RecipeCategory.REDSTONE ,ModBlocks.MAHOGANY_PRESSURE_PLATE, Ingredient.ofItems(ModBlocks.MAHOGANY_PLANKS))
+                .criterion(hasItem(ModBlocks.MAHOGANY_PLANKS), conditionsFromItem(ModBlocks.MAHOGANY_PLANKS))
+                .offerTo(recipeExporter);
+
+        ShapelessRecipeJsonBuilder.create(RecipeCategory.REDSTONE, ModBlocks.MAHOGANY_BUTTON)
+                .input(ModBlocks.MAHOGANY_PLANKS)
+                .criterion(hasItem(ModBlocks.MAHOGANY_PLANKS), conditionsFromItem(ModBlocks.MAHOGANY_PLANKS))
+                .offerTo(recipeExporter);
 
     }
 }

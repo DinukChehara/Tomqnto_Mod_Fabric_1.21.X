@@ -16,78 +16,78 @@ public class ModBlocks {
 
     public static final Block DEEPSLATE_LUMINITE_ORE = registerModBlock(
             "deepslate_luminite_ore",
-            new Block(AbstractBlock.Settings.create().requiresTool().strength(4.4f, 4.5f).sounds(BlockSoundGroup.DEEPSLATE)),
+            new Block(AbstractBlock.Settings.create().strength(4.4f, 4.5f).sounds(BlockSoundGroup.DEEPSLATE)),
             true);
 
     public static final Block LUMINITE_BLOCK = registerModBlock(
             "luminite_block",
-            new Block(AbstractBlock.Settings.create().requiresTool().strength(4.4f, 4.5f).sounds(BlockSoundGroup.STONE)),
+            new Block(AbstractBlock.Settings.create().strength(4.4f, 4.5f).sounds(BlockSoundGroup.STONE)),
             true);
 
     public static final Block MAHOGANY_LOG = registerModBlock(
             "mahogany_log",
-            new PillarBlock(AbstractBlock.Settings.create().requiresTool().strength(2.0f, 7.0f).sounds(BlockSoundGroup.WOOD)),
+            new PillarBlock(AbstractBlock.Settings.create().strength(2.3f).sounds(BlockSoundGroup.WOOD)),
             true);
 
     public static final Block STRIPPED_MAHOGANY_LOG = registerModBlock(
             "stripped_mahogany_log",
-            new PillarBlock(AbstractBlock.Settings.create().requiresTool().strength(2.0f, 7.0f).sounds(BlockSoundGroup.WOOD)),
+            new PillarBlock(AbstractBlock.Settings.create().strength(2.3f).sounds(BlockSoundGroup.WOOD)),
             true);
 
     public static final Block MAHOGANY_WOOD = registerModBlock(
             "mahogany_wood",
-            new PillarBlock(AbstractBlock.Settings.create().requiresTool().strength(2.0f, 7.0f).sounds(BlockSoundGroup.WOOD)),
+            new PillarBlock(AbstractBlock.Settings.create().strength(2.4f).sounds(BlockSoundGroup.WOOD)),
             true);
 
     public static final Block STRIPPED_MAHOGANY_WOOD = registerModBlock(
             "stripped_mahogany_wood",
-            new PillarBlock(AbstractBlock.Settings.create().requiresTool().strength(2.0f, 7.0f).sounds(BlockSoundGroup.WOOD)),
+            new PillarBlock(AbstractBlock.Settings.create().strength(2.4f).sounds(BlockSoundGroup.WOOD)),
             true);
 
     public static final Block MAHOGANY_PLANKS = registerModBlock(
             "mahogany_planks",
-            new Block(AbstractBlock.Settings.create().requiresTool().strength(2.7f, 5.0f).sounds(BlockSoundGroup.WOOD)),
+            new Block(AbstractBlock.Settings.create().strength(2.5f, 3.1f).sounds(BlockSoundGroup.WOOD)),
             true);
 
     public static final Block MAHOGANY_SLABS = registerModBlock(
             "mahogany_slabs",
-            new SlabBlock(AbstractBlock.Settings.create().requiresTool().strength(2.7f, 5.0f).sounds(BlockSoundGroup.WOOD)),
+            new SlabBlock(AbstractBlock.Settings.create().strength(2.3f).sounds(BlockSoundGroup.WOOD)),
             true);
 
     public static final Block MAHOGANY_STAIRS = registerModBlock(
             "mahogany_stairs",
             new StairsBlock(ModBlocks.MAHOGANY_PLANKS.getDefaultState(),
-                    AbstractBlock.Settings.create().requiresTool().strength(2.7f, 5.0f).sounds(BlockSoundGroup.WOOD)),
+                    AbstractBlock.Settings.create().strength(2.8f).sounds(BlockSoundGroup.WOOD)),
             true);
 
     public static final Block MAHOGANY_FENCE = registerModBlock(
             "mahogany_fence",
-            new FenceBlock(AbstractBlock.Settings.create().requiresTool().strength(2.7f, 5.0f).sounds(BlockSoundGroup.WOOD)),
+            new FenceBlock(AbstractBlock.Settings.create().strength(2.8f, 3.3f).sounds(BlockSoundGroup.WOOD)),
             true);
 
     public static final Block MAHOGANY_FENCE_GATE = registerModBlock(
             "mahogany_fence_gate",
-            new FenceGateBlock(WoodType.OAK,AbstractBlock.Settings.create().requiresTool().strength(2.7f, 5.0f).sounds(BlockSoundGroup.WOOD)),
+            new FenceGateBlock(WoodType.OAK,AbstractBlock.Settings.create().strength(2.8f, 3.3f).sounds(BlockSoundGroup.WOOD)),
             true);
 
     public static final Block MAHOGANY_BUTTON = registerModBlock(
             "mahogany_button",
-            new ButtonBlock(BlockSetType.OAK, 10 ,AbstractBlock.Settings.create().requiresTool().strength(2.7f, 5.0f).noCollision().sounds(BlockSoundGroup.WOOD)),
+            new ButtonBlock(BlockSetType.OAK, 10 ,AbstractBlock.Settings.create().strength(0.7f).noCollision().sounds(BlockSoundGroup.WOOD)),
             true);
 
     public static final Block MAHOGANY_PRESSURE_PLATE = registerModBlock(
             "mahogany_pressure_plate",
-            new PressurePlateBlock(BlockSetType.OAK,AbstractBlock.Settings.create().requiresTool().strength(2.7f, 5.0f).sounds(BlockSoundGroup.WOOD)),
+            new PressurePlateBlock(BlockSetType.OAK,AbstractBlock.Settings.create().strength(0.7f).sounds(BlockSoundGroup.WOOD)),
             true);
 
     public static final Block MAHOGANY_TRAPDOOR = registerModBlock(
             "mahogany_trapdoor",
-            new TrapdoorBlock(BlockSetType.OAK, AbstractBlock.Settings.create().requiresTool().strength(2.7f, 5.0f).sounds(BlockSoundGroup.WOOD).nonOpaque()),
+            new TrapdoorBlock(BlockSetType.OAK, AbstractBlock.Settings.create().nonOpaque().strength(2.7f).sounds(BlockSoundGroup.WOOD)),
             true);
 
     public static final Block MAHOGANY_DOOR = registerModBlock(
             "mahogany_door",
-            new DoorBlock(BlockSetType.OAK, AbstractBlock.Settings.create().requiresTool().strength(2.7f, 5.0f).sounds(BlockSoundGroup.WOOD).nonOpaque()),
+            new DoorBlock(BlockSetType.OAK, AbstractBlock.Settings.create().nonOpaque().strength(2.7f).sounds(BlockSoundGroup.WOOD)),
             true);
 
 
