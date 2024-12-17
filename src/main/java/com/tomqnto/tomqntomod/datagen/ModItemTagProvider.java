@@ -1,5 +1,6 @@
 package com.tomqnto.tomqntomod.datagen;
 
+import com.tomqnto.tomqntomod.block.ModBlocks;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricTagProvider;
 import net.minecraft.registry.RegistryWrapper;
@@ -15,5 +16,9 @@ public class ModItemTagProvider extends FabricTagProvider.ItemTagProvider {
 
     @Override
     protected void configure(RegistryWrapper.WrapperLookup wrapperLookup) {
+
+        getOrCreateTagBuilder(ItemTags.PLANKS)
+                .add(ModBlocks.MAHOGANY_PLANKS.asItem());
+
     }
 }
